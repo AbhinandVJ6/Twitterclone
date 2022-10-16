@@ -10,9 +10,7 @@ Check out [LIVE DEMO here!!](https://twitterclone.abhinandv1.repl.co/)
 # Screenshot
 
 
-
-<img width="1391" alt="Twitter-clone" src="<img width="368" alt="image" src="https://user-images.githubusercontent.com/107241846/184101814-6b703036-7b08-42c1-863e-b594c55b6cdc.png">">
-
+![Screenshot 2022-10-16 at 7 16 30 AM](https://user-images.githubusercontent.com/107241846/196014005-a611ba9d-3b4f-45ad-aea2-53a661a60aa3.png)
 
 
 
