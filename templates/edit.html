@@ -9,25 +9,27 @@
 
     <section class="post_form">
         <div class="primary">
-            <img src="{% static 'img/prfl.avif' %}" style="width:69px; border-radius:50%;" />
+            <img src="{% static 'img/n.jpg' %}" style="width:69px; border-radius:50%;" />
         </div>
-
+        <div class="main1">
         <form action="/edit/{{post.id}}/" method="POST" enctype="multipart/form-data" class="forms">
             {% csrf_token %}
             <input type="text" value="{{post.name}}" name="name" id="name"  />
 
             <input id="textarea" name="body" value="{{post.body}}" />
             {% if post.image.url %}
-            <img src="{{post.image.url}}" alt="image" style="width: 100%; height: 315px; object-fit: contain" />
+            <img class="main-img"src="{{post.image.url}}" alt="image" />
             {%endif %}
             <div class="files">
                 <input type="file" value="Choose File" name="image" />
                 <br />
 
                 <div class="buttons">
-                    <input type="submit" value="Update" id="tweet" style="float: right; border-radius: 10px; background-color: #00ACEE; width:23%; position: relative; top:11px" />
-                    <a href="/"> <input type="submit" id="cancel" value="Cancel" style="border-radius:10px; float: right; background-color: #00ACEE; width:23%; position: relative; top:11px; right: 5px;"/></a>
+                    <a href="/"> <input type="submit" id="cancel" value="Cancel" /></a>
+                    <input type="submit" value="Update" id="tweet"  />
+                    
                 </div>
+            </div>
             </div>
         </form>
 
