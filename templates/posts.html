@@ -5,9 +5,9 @@
 </link>
 <section class="content">
     <header>
-        <img class="twitter" src="{% static 'img/twitter.png' %}" style="width:7%; position: relative; bottom:3px " />
-        
-        <h2 style="color:#000608; font-weight:bold; font-family: auto;"> Home </h2>
+        <img class="twitter" src="{% static 'img/twitter.png' %}" />
+
+        <h2> Home </h2>
 
     </header>
 
@@ -16,15 +16,11 @@
     <section class="post_form">
         <form action="/" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <img class="menu_icon js-menu-icon" src="{% static 'img/n.jpg' %}"
-                style="width:22%; height: 121px; border: 24px solid #fafcfc; border-radius: 50%;" />
-            </link>
+            <img class="menu_icon js-menu-icon" src="{% static 'img/ima.jpeg' %}"/></link>
             <input type="text" name="name" placeholder="Name" required>
             <textarea name="body" placeholder="What's happening? " required></textarea>'
             <input type="file" id="files" name="image" required />
-
-            <input class="submit" type="submit" value="Tweet"
-                style="width: 19%; border-radius: 14px; float: right; color: white; background-color: #00ACEE" />
+            <input class="submit" type="submit" value="Tweet"/>
         </form>
     </section>
     <section class="posts">
@@ -34,25 +30,24 @@
 
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" />
                 <div class="menu">
-                    <div id="e" style="border-radius: 11px; background-color: #00ACEE;text-align: center; padding:5px; position: relative; top: -3px;">
-                    <a href="/edit/{{post.id}}/" style="color:#fafcfc;"> Edit </a> <br>
+                    <div id="e">
+                        <a href="/edit/{{post.id}}/" > Edit </a> <br>
                     </div>
-                    <div id="d" style="border-radius: 11px; background-color: #00ACEE;text-align: center; padding: 6px; ">
-                    <a href="/delete/{{post.id}}/" style="color:#fafcfc; font-size: 11px; position: inherit;">Delete</a>
+                    <div id="d">
+                        <a href="/delete/{{post.id}}/">Delete</a>
                     </div>
 
                 </div>
                 <div class="logo">
-                    <img src="{% static 'img/ima.jpeg' %}"
-                        style="width:75px; height: auto; border: 6px solid #fafcfc; border-radius: 50%; position: relative; bottom: 20px;" />
+                    <img src="{% static 'img/ima.jpeg' %}"/>
                 </div>
                 <div class="name_body">
-                    <div class="name"style="font-weight: bold; position: relative;bottom:7px">{{post.name}}</div>
-                    <div class="datetime" style="position:static; float:right ;">{{post.created_at}}</div>
+                    <div class="name">{{post.name}}</div>
+                    <div class="datetime" >{{post.created_at}}</div>
                     <p>{{post.body}}</p>
                     <img class="body-image" src="{{post.image.url}}" alt="" />
-                    <div class="icon_list" style="position:relative ; top: 10px; right: 61px;">
-                        <a href="/like/{{post.id}}"> <img src="/static/img/like.png" style="width:30px;" alt="like" />
+                    <div class="icon_list">
+                        <a href="/like/{{post.id}}"> <img src="/static/img/like.png"  alt="like" />
                         </a>
                         {{ post.likes }}
                     </div>
